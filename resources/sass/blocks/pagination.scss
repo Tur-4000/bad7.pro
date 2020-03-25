@@ -1,0 +1,46 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.page-item {
+
+  //padding: 0 1rem;
+}
+
+.page-link {
+  color: white;
+  background-color: $menuBg;
+  text-decoration: none;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding: 1rem;
+  transition-property: background-color;
+  transition-duration: 500ms;
+
+  &:hover {
+    color: red;
+    background-color: $black;
+  }
+}
+
+.active > .page-link {
+  color: $activeColor;
+  background-color: $menuBg;
+}
+
+.disabled > .page-link {
+  color: grey;
+  background-color: $menuBg;
+
+  &:hover {
+    color: grey;
+    background-color: $menuBg;
+  }
+}

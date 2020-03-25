@@ -1,0 +1,209 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $menuBg;
+  color: $lightText;
+  overflow: auto;
+  padding: 0;
+}
+
+.navbar__wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo__img {
+  width: 150px;
+  height: 80px;
+  fill: $lightText;
+  transition-property: fill;
+  transition-duration: 500ms;
+}
+
+.navbar__logo {
+  margin: 1rem auto;
+}
+
+.logo__link {
+
+  &:hover, &:focus, &:active {
+    .logo__img {
+      fill: $red;
+    }
+  }
+
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar__socials {
+  display: block;
+  margin-top: 10%;
+  margin-left: 1.5rem;
+  margin-right: auto;
+}
+
+.navbar__contacts {
+  display: block;
+  align-self: center;
+  padding: 0;
+  margin-top: auto;
+}
+
+.navbar__hamburger {
+  display: none;
+}
+
+// Contacts
+.navbar__contacts--element {
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+
+  &:first-child {
+    margin-bottom: 1em;
+  }
+
+  &:last-child {
+    margin-bottom: 1em;
+  }
+}
+
+.navbar__contacts--link {
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  color: $lightText;
+  font-size: 1em;
+  box-sizing: border-box;
+  border-bottom: 2px solid $activeColor;
+  padding-bottom: 0.2em;
+  transition-duration: 500ms;
+  transition-property: color, border-color;
+
+  &:hover, &:focus {
+    color: $activeColor;
+    border-color: $red;
+  }
+}
+
+
+@media (max-width: 980px) {
+
+  .navbar {
+    min-height: 8rem;
+    align-items: center;
+  }
+
+  .navbar__wrap {
+    position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 8rem;
+    width: 100%;
+  }
+
+  .navbar__logo {
+    margin: auto auto auto 1rem;
+    order: 1;
+  }
+
+  .navbar__socials {
+    order: 2;
+    margin: auto 1em auto auto;
+  }
+
+  .navbar__list {
+    order: 3;
+    margin-top: auto;
+    margin-bottom: auto;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    align-self: center;
+
+    .list__link {
+      padding-left: 10%;
+      padding-right: 10%;
+      text-align: center;
+    }
+  }
+
+  .navbar__contacts {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+
+  .navbar {
+    min-height: 5rem;
+  }
+
+  .navbar__wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    min-height: 5rem;
+  }
+
+  .navbar__logo {
+    grid-column: span 1;
+    grid-row: span 1;
+    margin-left: 5px;
+
+    .logo__link {
+      font-size: 28px;
+    }
+  }
+
+  .navbar__list {
+    display: none;
+  }
+
+  .navbar__list--active {
+    grid-column: span 3;
+    grid-row: span 1;
+    display: flex;
+    flex-direction: column;
+    order: 4;
+
+    .list__element {
+      display: block;
+      width: 100%;
+      padding: 0;
+
+      .list__link {
+        margin: 0;
+      }
+    }
+  }
+
+  .navbar__hamburger {
+    order: 2;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .navbar__socials {
+    grid-column: span 1;
+    grid-row: span 1;
+    order: 3;
+    margin-right: 5px;
+  }
+
+}

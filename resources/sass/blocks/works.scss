@@ -1,0 +1,58 @@
+.works {
+    list-style: none;
+}
+
+.works__element {
+    //margin-top: 2%;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.works__video {
+    position: relative;
+    padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+}
+
+.works__info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: black;
+    opacity: 0.7;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.works__title {
+    display: block;
+    border-bottom: 2px solid red;
+    margin-right: 2rem;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    color: $lightText;
+}
+
+.works__details {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.2rem 2rem 0 0;
+    font-size: 0.8rem;
+}
+
+.works__date {
+    color: $lightText;
+}
+
+.works__type {
+    color: $lightText;
+}
+
+.works__description {
+    color: $lightText;
+    overflow: hidden;
+}
+

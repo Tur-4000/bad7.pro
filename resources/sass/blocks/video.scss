@@ -1,0 +1,57 @@
+.video {
+    display: flex;
+    flex-direction: column;
+}
+
+.video__btn {
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding-top: 5px;
+    padding-left: 15px;
+    border-radius: 50%;
+    border: 3px solid $white;
+    z-index: 10;
+    transition-property: background, border-color;
+    transition-duration: 500ms;
+
+    svg {
+        width: 40px;
+        height: 40px;
+        fill: $white;
+        z-index: 10;
+        transition-property: fill;
+        transition-duration: 500ms;
+    }
+
+    &:hover {
+        background: $white;
+
+        svg {
+            fill: $activeColor;
+        }
+    }
+
+    &:focus {
+        background: darken($white, 25%);
+        border-color: darken($white, 25%);
+
+        svg {
+            fill: darken($activeColor, 25%);
+        }
+    }
+}
+
+.video__text {
+    color: $white;
+    font-size: 20px;
+}
+
+.video--clip {
+    display: flex;
+    justify-content: center;
+    background-size: 100%;
+}

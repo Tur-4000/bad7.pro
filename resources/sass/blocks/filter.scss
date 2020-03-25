@@ -1,0 +1,71 @@
+.filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: $lightText;
+}
+
+.filter__element {
+    display: block;
+    flex-basis: 33.33%;
+    text-align: center;
+    border-bottom: 3px solid $menuBg;
+    transition-duration: 500ms;
+    transition-property: border-color;
+
+    &:hover {
+        border-color: red;
+        cursor: pointer;
+    }
+}
+
+.filter__element--active {
+    border-color: red;
+
+    .filter__link {
+        color: red;
+    }
+}
+
+.filter__link {
+    padding: 2% 25%;
+    font-size: 20px;
+    text-decoration: none;
+    color: $black;
+    line-height: 2;
+    transition-duration: 500ms;
+    transition-property: color;
+
+    &:hover {
+        color: red;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .filter__link {
+        padding: 2% 15%;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .filter {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .filter__element {
+        width: 100%;
+    }
+
+    .filter__link {
+        padding: 2% 33%;
+    }
+
+}

@@ -1,0 +1,146 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2rem;
+  background-color: $cardBg;
+}
+
+.card__head {
+  position: relative;
+  padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.card__title {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: normal;
+}
+
+.card__subtitle {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card__text {
+  min-height: 120px;
+  line-height: 1.5;
+  margin-bottom: 5%;
+  text-align: justify;
+
+  p {
+    margin: 0.4rem 0;
+  }
+}
+
+.card__text--hide {
+
+  label {
+    font-size: 0.8rem;
+    color: $menuBg;
+    text-transform: uppercase;
+    border-bottom: 1px dotted $menuBg;
+    padding: 0;
+    cursor: pointer;
+    display: inline-block;
+    transition-duration: 500ms;
+    transition-property: color, border;
+
+    &:hover {
+      color: red;
+      border-color: red;
+    }
+  }
+
+}
+
+.hide {
+  display: none;
+}
+
+.hide + label ~ p {
+  display: none;
+}
+
+.hide:checked + label {
+  color: $activeColor;
+  border-bottom: 0;
+}
+
+.hide:checked + label ~ p {
+  display: inline-block;
+}
+
+.card__btn {
+  margin-top: auto;
+  background: $menuBg;
+  border: transparent;
+  box-sizing: border-box;
+  padding: 3%;
+  color: $lightText;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  transition-property: color, background-color;
+  transition-duration: 500ms;
+
+  &:hover {
+    cursor: pointer;
+    background: $black;
+    color: $activeColor;
+  }
+
+  &:focus {
+    background: $menuBg;
+  }
+}
+
+.card__btn--youtube {
+  //align-self: center;
+  margin-top: 14%;
+  margin-bottom: auto;
+  z-index: 3;
+}
+
+.card__head--reklama {
+  display: flex;
+  justify-content: center;
+  //justify-content: center;
+  background: url("/img/reklama-bg.jpg") center no-repeat;
+  background-size: 100%;
+}
+.card__head--image {
+  display: flex;
+  justify-content: center;
+  background: url("/img/image-bg.jpg") center no-repeat;
+  background-size: 100%;
+}
+.card__head--translation {
+  background: url("/img/translation.jpg") center no-repeat;
+  background-size: 100%;
+}
+.card__head--promotion {
+  background: url("/img/SEO15.jpg") center no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 980px) {
+
+  .card {
+    padding: 1rem;
+  }
+
+}

@@ -1,0 +1,91 @@
+.popupOrderForm {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+
+    background: url("/img/contact-bg2.jpg") center center no-repeat;
+    background-size: cover;
+}
+
+.popupOrderForm__help {
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 0 0 0 26%;
+}
+
+.popupOrderForm__element {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+
+    label {
+        align-self: start;
+        display: inline-block;
+        width: 25%;
+        vertical-align: top;
+    }
+
+    input:not(.popupOrderForm__button), textarea {
+        display: inline-block;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        background: none;
+        width: 70%;
+        padding: 5px;
+
+        &:focus {
+            border-bottom: 2px solid $activeColor;
+        }
+    }
+
+    .popupOrderForm__button {
+        display: block;
+        margin: 0 0 0 auto;
+        padding: 0.5rem 2rem;
+        background: none;
+        border: 2px solid $menuBg;
+        border-radius: 1.5rem;
+
+        &:hover {
+            cursor: pointer;
+            color: $activeColor;
+            background: $menuBg;
+        }
+
+        &:focus {
+            color: $activeColor;
+            background: darken($menuBg, 50%);
+            border-bottom: 2px solid $menuBg;
+        }
+    }
+}
+
+@media (max-width: 980px) {
+
+    .popupOrderForm {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 680px) {
+
+    .popupOrderForm {
+        width: 90%;
+    }
+
+    .popupOrderForm__element {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+
+        label, input:not(.popupOrderForm__button), textarea {
+            width: 100%;
+        }
+    }
+
+}

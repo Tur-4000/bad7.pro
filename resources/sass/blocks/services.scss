@@ -1,0 +1,44 @@
+.services {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-bottom: 4%;
+  background-color: $lightText;
+}
+
+.services__header {
+    height: 18em;
+    background: url("/img/services-banner.jpg") center no-repeat;
+    background-size: cover;
+    background-position: center bottom;
+    margin-bottom: 30px;
+}
+
+.services__content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(320px, auto));
+    grid-gap: 1rem;
+    justify-content: center;
+    padding: 2% 5%;
+}
+
+.services__card {
+    grid-column: span 1;
+    grid-row: span 1;
+}
+
+@media (max-width: 768px) {
+
+    .services__content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 560px) {
+
+    .services__content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+}

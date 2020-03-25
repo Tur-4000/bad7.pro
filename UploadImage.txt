@@ -1,0 +1,8 @@
+// src/UploadImage.php
+
+use Illuminate\Support\Str;
+
+
+429//        $ind = time() . '_' . mb_strtolower(str_random(8));
+            $ind = time() . '_' . mb_strtolower(Str::random(8));
+

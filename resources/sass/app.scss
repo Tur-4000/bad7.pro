@@ -1,0 +1,27 @@
+@import "normalize";
+@import "colors";
+@import "core";
+
+// Navbar styles
+@import "blocks/navbar";
+@import "blocks/list";
+@import "blocks/socials";
+@import "blocks/hamburger";
+
+// Main content styles
+@import "blocks/main";
+@import "blocks/video";
+@import "blocks/services";
+@import "blocks/card";
+@import "blocks/contacts";
+@import "blocks/portfolio";
+@import "blocks/works";
+@import "blocks/filter";
+@import "blocks/pagination";
+
+// Magnific Popup v1.1.0
+@import "~magnific-popup";
+
+// Feedback form styles
+@import "blocks/form";
+@import "blocks/popupOrderForm";
