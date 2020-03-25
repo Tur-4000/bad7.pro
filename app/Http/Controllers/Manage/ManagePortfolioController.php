@@ -7,6 +7,7 @@ use App\Http\Requests\StorePortfolioRequest;
 use App\Http\Requests\UpdatePortfolioRequest;
 use Illuminate\Http\Request;
 use App\Models\Portfolio;
+use App\Models\Page;
 use UploadImage;
 use UploadImageException;
 
@@ -23,8 +24,11 @@ class ManagePortfolioController extends Controller
         $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published'])
             ->orderBy('id', 'DESC')
             ->get();
+        $tags = Page::where('name', 'works')->first();
 
-        return view('manage.portfolio.index', compact('portfolio', 'type'));
+//        dd($tags);
+
+        return view('manage.portfolio.index', compact('portfolio', 'type', 'tags'));
     }
 
     /**

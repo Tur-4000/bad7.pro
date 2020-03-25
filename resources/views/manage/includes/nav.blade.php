@@ -11,16 +11,26 @@
                     <a class="nav-link" href="{{ route('manage.index') }}">Заявки <span class="sr-only">(current)</span></a>
                 </li>
             @endhasrole
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('manage.portfolio.index') }}">Работы</a>
+            @hasanyrole('Developer|Admin|ContentManager')
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Управление контентом</a>
+                <div class="dropdown-menu" aria-labelledby="pages">
+                    <a class="dropdown-item" href="#">Главная страница</a>
+                    <a class="dropdown-item" href="#">Страница "Услуги"</a>
+                    <a class="dropdown-item" href="{{ route('manage.portfolio.index') }}">Страница "Работы"</a>
+                    <a class="dropdown-item" href="#">Страница "Контакты"</a>
+                </div>
             </li>
+
+            @endhasrole
         </ul>
 
         @hasanyrole('Developer|Admin')
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Администрирование</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="nav-link dropdown-toggle" href="#" id="administration" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Администрирование</a>
+                    <div class="dropdown-menu" aria-labelledby="administration">
                         <a class="dropdown-item" href="{{ route('manage.user.index') }}">
                             <i class="fas fa-user-friends"></i>
                             Пользователи
@@ -43,7 +53,7 @@
         <ul class="navbar-nav">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ auth()->user()->name }}</a>
-                <div class="dropdown-menu" aria-labelledby="dropdown01">
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown01">
                     <a class="dropdown-item" href="{{ route('change-password') }}">
                         <i class="fas fa-key"></i>
                         Изменить пароль

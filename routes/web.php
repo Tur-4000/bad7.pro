@@ -63,4 +63,7 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::resource('/manage/permissions', 'Auth\PermissionController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update')
         ->names('manage.permission');
+    Route::resource('/manage/pages', 'Manage\ManagePageController')
+        ->only('create', 'store', 'edit', 'update')
+        ->names('manage.pages');
 });
