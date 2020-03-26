@@ -33,13 +33,13 @@
             </svg>
         </a>
     </li>
-    <li class="socials__element">
-        <a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram">
-            <svg class="socials__instagram">
-                <use xlink:href="/img/symbol/sprite.svg#instagram"></use>
-            </svg>
-        </a>
-    </li>
+    {{--<li class="socials__element">--}}
+        {{--<a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram">--}}
+            {{--<svg class="socials__instagram">--}}
+                {{--<use xlink:href="/img/symbol/sprite.svg#instagram"></use>--}}
+            {{--</svg>--}}
+        {{--</a>--}}
+    {{--</li>--}}
     <li class="socials__element">
         <a href="https://www.youtube.com/channel/UCKCNjLQGyFdnxz5bhGMsxMQ" class="socials__link" aria-label="Youtube">
             <svg class="socials__youtube">
@@ -55,7 +55,7 @@
 
 <ul class="navbar__contacts">
     <li class="navbar__contacts--element">
-        <a href="mailto:sales@bad7.pro" class="navbar__contacts--link">sales@bad7.pro</a>
+        <a href="tel:+380501572597" class="navbar__contacts--link">+38 (050) 157 25 97</a>
     </li>
     <li class="navbar__contacts--element">
         <a href="tel:+380675973963" class="navbar__contacts--link">+38 (067) 597 39 63</a>
