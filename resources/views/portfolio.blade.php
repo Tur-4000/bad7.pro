@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
-@section('title'){{ $title }}@endsection
+@section('metatag')
+
+    <meta name="title" content="{{ $page->title_tag }}">
+    <meta name="description" content="{{ $page->description_tag }}">
+    <meta name="keywords" content="{{ $page->keywords_tag }}">
+
+@endsection
+
+@section('title') - {{ $page->user_friendly_name }}@endsection
 
 @section('content')
 

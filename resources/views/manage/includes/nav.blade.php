@@ -16,7 +16,7 @@
                 <a class="nav-link dropdown-toggle" href="#" id="pages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Управление контентом</a>
                 <div class="dropdown-menu" aria-labelledby="pages">
-                    <a class="dropdown-item" href="#">Главная страница</a>
+                    <a class="dropdown-item" href="{{ route('manage.mainpage') }}">Главная страница</a>
                     <a class="dropdown-item" href="#">Страница "Услуги"</a>
                     <a class="dropdown-item" href="{{ route('manage.portfolio.index') }}">Страница "Работы"</a>
                     <a class="dropdown-item" href="#">Страница "Контакты"</a>

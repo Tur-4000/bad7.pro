@@ -24,8 +24,6 @@
 
             {{ Form::model($portfolio, ['route' => ['manage.portfolio.update', $portfolio->id], 'method' => 'PATCH','files'=>'true']) }}
 
-
-
                 @include('manage.includes.portfolio_form')
 
                 <div class="form-group d-flex justify-content-between">

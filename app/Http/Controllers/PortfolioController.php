@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Portfolio;
 use Illuminate\Http\Request;
 use UploadImage;
+use App\Models\Page;
 
 class PortfolioController extends Controller
 {
@@ -15,7 +16,9 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::where('published', 1)
             ->orderBy('date', 'desc')
             ->paginate(4);
-        return view('portfolio', compact('title', 'portfolio', 'type', 'workType'));
+        $page = Page::where('name', 'portfolio')->first();
+
+        return view('portfolio', compact('title', 'portfolio', 'type', 'workType', 'page'));
     }
 
     public function filter($workType) {
@@ -26,6 +29,8 @@ class PortfolioController extends Controller
             ->where('type', '=', $workType)
             ->orderBy('date', 'desc')
             ->paginate(4);
-        return view('portfolio', compact('title', 'portfolio', 'type', 'workType'));
+        $page = Page::where('name', 'portfolio')->first();
+
+        return view('portfolio', compact('title', 'portfolio', 'type', 'workType', 'page'));
     }
 }

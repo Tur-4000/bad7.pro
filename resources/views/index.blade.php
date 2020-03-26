@@ -25,7 +25,9 @@
                         </svg>
                     </h1>
                     <p class="main__text">
-                        Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).<br>
+                        {{ $content->text }}
+                        {{--Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).--}}
+                        <br>
                         <a href="#order-form"  class="main__link popup-with-form">сделать хорошо</a>
                     </p>
                 </div>
@@ -34,7 +36,8 @@
             <div class="main__video">
                 <div class="main__video--wrapper">
                     <div class="video">
-                        <a class="popup-youtube" href="https://www.youtube.com/watch?v=Qv97VzXxUXc">
+                        {{--<a class="popup-youtube" href="https://www.youtube.com/watch?v=Qv97VzXxUXc">--}}
+                        <a class="popup-youtube" href="{{ $content->video_url }}">
                             <button class="video__btn">
                                 <svg>
                                     <use xlink:href="/img/symbol/sprite.svg#play"></use>

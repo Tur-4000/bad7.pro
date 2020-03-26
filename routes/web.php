@@ -50,6 +50,10 @@ Route::group( ['middleware' => ['auth']], function() {
         ->only('show', 'edit', 'update', 'destroy', 'deleted')
         ->names('manage.order');
 
+    Route::get('/manage/mainpage', 'Manage\ManageMainPageController@show')->name('manage.mainpage');
+    Route::get('/manage/manpage/edit', 'Manage\ManageMainPageController@edit')->name('manage.mainpage.edit');
+    Route::patch('/manage/manpage/edit', 'Manage\ManageMainPageController@update')->name('manage.mainpage.update');
+
     Route::resource('/manage/pages', 'Manage\ManagePageController')
         ->only('create', 'store', 'edit', 'update')
         ->names('manage.pages');
