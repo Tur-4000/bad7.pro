@@ -80,8 +80,7 @@
                     Title
                 </h3>
                 <div class="card-body">
-                    {{--<p class="card-text h5">{{ $tags->title_tag }}</p>--}}
-                    <p class="card-text h5"></p>
+                    <p class="card-text h5">{{ $tags->title_tag }}</p>
                 </div>
             </div>
 
@@ -90,8 +89,7 @@
                     Description
                 </h3>
                 <div class="card-body">
-                    {{--<p class="card-text h5">{{ $tags->description_tag }}</p>--}}
-                    <p class="card-text h5"></p>
+                    <p class="card-text h5">{{ $tags->description_tag }}</p>
                 </div>
             </div>
 
@@ -100,8 +98,7 @@
                     Keywords
                 </h3>
                 <div class="card-body">
-                    {{--<p class="card-text h5">{{ $tags->keywords_tag }}</p>--}}
-                    <p class="card-text h5"></p>
+                    <p class="card-text h5">{{ $tags->keywords_tag }}</p>
                 </div>
             </div>
 

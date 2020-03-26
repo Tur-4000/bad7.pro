@@ -55,8 +55,9 @@ class ManageMainPageController extends Controller
     public function edit()
     {
         $content = MainPage::all()->first();
+        $tags = Page::where('name', 'main')->first();
 
-        return view('manage.mainpage.edit', compact('content'));
+        return view('manage.mainpage.edit', compact('content', 'tags'));
     }
 
     /**

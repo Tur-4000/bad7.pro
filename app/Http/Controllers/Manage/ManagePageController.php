@@ -63,7 +63,7 @@ class ManagePageController extends Controller
      */
     public function update(Request $request, Page $page)
     {
-        dd($request->all(), $page);
+        dd(__METHOD__, $request->all(), $page);
     }
 
     /**
