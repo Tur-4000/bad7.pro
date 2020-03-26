@@ -4,7 +4,7 @@
 
     <div class="row">
         <div class="col-10">
-            <h1>Страница "Работы"</h1>
+            <h1>Страница "{{ $tags->user_friendly_name }}"</h1>
         </div>
     </div>
 
@@ -83,7 +83,8 @@
 
             <div class="row mt-2">
                 <div class="col-12">
-                    <a href="#" class="btn btn-outline-primary btn-sm float-left">
+                    <a href="{{ route('manage.pages.edit', $tags->name) }}" class="btn btn-outline-primary btn-sm float-left">
+                    {{--<a href="#" class="btn btn-outline-primary btn-sm float-left">--}}
                         <i class="fas fa-edit"></i>
                         Редактировать</a>
                     @hasanyrole('Developer|Admin')

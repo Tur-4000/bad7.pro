@@ -5,6 +5,9 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Валерий Турбанов">
+
+    @yield('metatag')
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161482556-1"></script>
@@ -20,7 +23,9 @@
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
     <script src="{{ mix('/js/app.js') }}"></script>
 
-    <title>Bad7 Production</title>
+    <title>
+        Bad7 Production  @yield('title')
+    </title>
 </head>
 <body>
 

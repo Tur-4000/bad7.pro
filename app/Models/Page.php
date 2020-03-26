@@ -11,5 +11,22 @@ class Page extends Model
         'title_tag',
         'description_tag',
         'keywords_tag',
+        'user_friendly_name',
+        'description',
     ];
+
+    public function getRouteKeyName()
+    {
+        return 'name';
+    }
+
+    public static function defaultPages()
+    {
+        return [
+            'main',
+            'services',
+            'portfolio',
+            'contacts',
+        ];
+    }
 }

@@ -1973,6 +1973,14 @@ img.mfp-img {
   border-bottom: 2px solid #ffc107;
 }
 
+.form__element .form__alert {
+  margin-left: 26%;
+}
+
+.form__element .form__alert--danger {
+  color: #f00;
+}
+
 .form__element .form__button {
   display: block;
   margin: 0 0 0 auto;
@@ -2006,6 +2014,14 @@ img.mfp-img {
   .form__element input:not(.form__button),
   .form__element textarea {
     width: 100%;
+  }
+
+  .form__element .form__help {
+    padding: 2px;
+  }
+
+  .form__element .form__alert {
+    margin-left: 2px;
   }
 }
 

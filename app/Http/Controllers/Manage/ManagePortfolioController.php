@@ -24,7 +24,7 @@ class ManagePortfolioController extends Controller
         $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published'])
             ->orderBy('id', 'DESC')
             ->get();
-        $tags = Page::where('name', 'works')->first();
+        $tags = Page::where('name', 'portfolio')->first();
 
 //        dd($tags);
 

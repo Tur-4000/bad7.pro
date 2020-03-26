@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\StorePageRequest;
 use App\Models\Page;
 use Illuminate\Http\Request;
 
@@ -26,42 +27,53 @@ class ManagePageController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StorePageRequest $request)
     {
-        //
+//        dd($request->all());
+
+        $page = new Page();
+        $page->fill($request->all());
+        $page->save();
+
+//        TODO: сделать редирект на индекс управления добавленной страницы
+
+        return redirect()
+            ->route('manage.portfolio.index');
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Page  $page
+     * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
     public function edit(Page $page)
     {
-        //
+//        dd($page);
+
+        return view('manage.pages.edit', compact('page'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Page  $page
+     * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, Page $page)
     {
-        //
+        dd($request->all(), $page);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Page  $page
+     * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
     public function destroy(Page $page)
     {
-        //
+        dd($page);
     }
 }

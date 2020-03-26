@@ -19,11 +19,6 @@ Route::get('/contacts', 'ContactsController@index')->name('contacts');
 
 Route::post('/order/add', 'OrderController@store')->name('order.add');
 
-
-Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
-    ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
-    ->names('manage.portfolio');
-
 Auth::routes(['register' => false]);
 //Auth::routes();
 
@@ -47,12 +42,17 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
         ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
         ->names('manage.portfolio');
-    Route::get('/manage', 'Manage\ManageOrderController@index')->name('manage.index')->middleware('auth');
+
+    Route::get('/manage', 'Manage\ManageOrderController@index')->name('manage.index');
     Route::get('/manage/order/deleted', 'Manage\ManageOrderController@deleted')->name('manage.order.deleted');
     Route::patch('/manage/order/{id}/restore', 'Manage\ManageOrderController@restore')->name('manage.order.restore');
     Route::resource('/manage/order', 'Manage\ManageOrderController')
         ->only('show', 'edit', 'update', 'destroy', 'deleted')
         ->names('manage.order');
+
+    Route::resource('/manage/pages', 'Manage\ManagePageController')
+        ->only('create', 'store', 'edit', 'update')
+        ->names('manage.pages');
 
     Route::resource('/manage/user', 'Manage\ManageUserController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')
@@ -63,7 +63,4 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::resource('/manage/permissions', 'Auth\PermissionController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update')
         ->names('manage.permission');
-    Route::resource('/manage/pages', 'Manage\ManagePageController')
-        ->only('create', 'store', 'edit', 'update')
-        ->names('manage.pages');
 });
