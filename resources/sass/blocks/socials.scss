@@ -45,6 +45,14 @@
   transition-property: fill;
 }
 
+.socials__viber {
+    width: 30px;
+    height: 30px;
+    fill: $viber;
+    transition-duration: 500ms;
+    transition-property: fill;
+}
+
 .socials__link {
 
   &:hover, &:focus, &:active {

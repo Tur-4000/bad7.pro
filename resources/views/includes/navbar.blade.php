@@ -26,20 +26,20 @@
             </svg>
         </a>
     </li>
-    <li class="socials__element">
-        <a href="https://twitter.com/" class="socials__link" aria-label="Twitter">
-            <svg class="socials__twitter">
-                <use xlink:href="/img/symbol/sprite.svg#twitter"></use>
-            </svg>
-        </a>
-    </li>
     {{--<li class="socials__element">--}}
-        {{--<a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram">--}}
-            {{--<svg class="socials__instagram">--}}
-                {{--<use xlink:href="/img/symbol/sprite.svg#instagram"></use>--}}
+        {{--<a href="https://twitter.com/" class="socials__link" aria-label="Twitter">--}}
+            {{--<svg class="socials__twitter">--}}
+                {{--<use xlink:href="/img/symbol/sprite.svg#twitter"></use>--}}
             {{--</svg>--}}
         {{--</a>--}}
     {{--</li>--}}
+    <li class="socials__element">
+        <a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram">
+            <svg class="socials__instagram">
+                <use xlink:href="/img/symbol/sprite.svg#instagram"></use>
+            </svg>
+        </a>
+    </li>
     <li class="socials__element">
         <a href="https://www.youtube.com/channel/UCKCNjLQGyFdnxz5bhGMsxMQ" class="socials__link" aria-label="Youtube">
             <svg class="socials__youtube">
