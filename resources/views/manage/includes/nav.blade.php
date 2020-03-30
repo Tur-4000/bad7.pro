@@ -19,7 +19,7 @@
                     <a class="dropdown-item" href="{{ route('manage.mainpage') }}">Главная страница</a>
                     <a class="dropdown-item" href="#">Страница "Услуги"</a>
                     <a class="dropdown-item" href="{{ route('manage.portfolio.index') }}">Страница "Работы"</a>
-                    <a class="dropdown-item" href="#">Страница "Контакты"</a>
+                    <a class="dropdown-item" href="{{ route('manage.contacts') }}">Страница "Контакты"</a>
                 </div>
             </li>
 

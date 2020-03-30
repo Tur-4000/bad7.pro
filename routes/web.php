@@ -39,24 +39,31 @@ Route::get('change-password', 'Auth\ChangePasswordController@index')->name('chan
 Route::post('change-password', 'Auth\ChangePasswordController@store')->name('change-password.update');
 
 Route::group( ['middleware' => ['auth']], function() {
-    Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
-        ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
-        ->names('manage.portfolio');
-
     Route::get('/manage', 'Manage\ManageOrderController@index')->name('manage.index');
+
     Route::get('/manage/order/deleted', 'Manage\ManageOrderController@deleted')->name('manage.order.deleted');
     Route::patch('/manage/order/{id}/restore', 'Manage\ManageOrderController@restore')->name('manage.order.restore');
     Route::resource('/manage/order', 'Manage\ManageOrderController')
         ->only('show', 'edit', 'update', 'destroy', 'deleted')
         ->names('manage.order');
 
+    Route::resource('/manage/pages', 'Manage\ManagePageController')
+        ->only('index', 'create', 'store', 'edit', 'update')
+        ->names('manage.pages');
+
     Route::get('/manage/mainpage', 'Manage\ManageMainPageController@show')->name('manage.mainpage');
     Route::get('/manage/manpage/edit', 'Manage\ManageMainPageController@edit')->name('manage.mainpage.edit');
     Route::patch('/manage/manpage/edit', 'Manage\ManageMainPageController@update')->name('manage.mainpage.update');
 
-    Route::resource('/manage/pages', 'Manage\ManagePageController')
-        ->only('index', 'create', 'store', 'edit', 'update')
-        ->names('manage.pages');
+    Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
+        ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
+        ->names('manage.portfolio');
+
+
+    Route::get('/manage/contats', 'Manage\ManageContactPageController@show')->name('manage.contacts');
+    Route::get('/manage/contats/edit', 'Manage\ManageContactPageController@edit')->name('manage.contacts.edit');
+    Route::patch('/manage/contats/edit', 'Manage\ManageContactPageController@update')->name('manage.contacts.update');
+
 
     Route::resource('/manage/user', 'Manage\ManageUserController')
         ->only('index', 'create', 'store', 'show', 'edit', 'update', 'destroy')

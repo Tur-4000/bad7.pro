@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Models\Order;
 use Illuminate\Http\Request;
+use App\Models\Page;
+use App\Models\Contact;
 
 class ContactsController extends Controller
 {
     public function index() {
-        $title = 'Наши контакты';
         $contacts = true;
         $order = new Order();
-        return view('contacts', compact('title', 'contacts', 'order'));
+        $content = Contact::all()->first();
+        $metaData = Page::where('name', 'contacts')->first();
+
+        return view('contacts', compact('content', 'contacts', 'order', 'metaData'));
     }
 }

@@ -12,7 +12,7 @@ class MainPageController extends Controller
     public function index() {
         $title = 'Главная';
         $order = new Order();
-        $page = Page::where('name', 'main')->first();
+        $page = Page::where('name', 'mainpage')->first();
         $content = MainPage::all()->first();
 
         return view('index', compact('title', 'order', 'page', 'content'));
