@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="{{ mix('/css/manage.css') }}">
     <script src="{{ mix('/js/manage.js') }}"></script>
-    <title>Управление контентом</title>
+    <title>BAD7 - Управление контентом</title>
 
 </head>
 <body>

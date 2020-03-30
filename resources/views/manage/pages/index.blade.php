@@ -21,7 +21,6 @@
         <table class="table table-hover">
             <thead class="thead-dark">
             <tr>
-                <th scope="col">#</th>
                 <th scope="col">Техническое название</th>
                 <th scope="col">Название</th>
                 <th scope="col">Описание</th>
@@ -33,8 +32,7 @@
             <tbody>
             @foreach($pages as $page)
                 <tr>
-                    <th scope="row">{{ $page->id }}</th>
-                    <td>
+                    <td scope="row">
                         <a href="{{ route('manage.pages.edit', $page->name) }}">
                             <i class="fas fa-edit"></i>
                             {{ $page->name }}

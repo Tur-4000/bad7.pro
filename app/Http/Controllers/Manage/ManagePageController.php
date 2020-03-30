@@ -17,7 +17,6 @@ class ManagePageController extends Controller
     public function index()
     {
         $pages = Page::select(
-            'id',
             'name',
             'title_tag',
             'description_tag',
