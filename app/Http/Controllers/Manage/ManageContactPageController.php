@@ -34,7 +34,7 @@ class ManageContactPageController extends Controller
     {
         $content = Contact::all()->first();
         $metaData = Page::where('name', 'contacts')->first();
-dd(__METHOD__, $content, $metaData);
+//dd(__METHOD__, $content, $metaData);
         return view('manage.contacts.edit', compact('content', 'metaData'));
     }
 
