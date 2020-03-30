@@ -53,27 +53,6 @@ class ManageOrderController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  int  $id
@@ -109,7 +88,7 @@ class ManageOrderController extends Controller
     public function update(UpdateOrderRequest $request, $id)
     {
         $order = Order::findOrFail($id);
-        $order->note = $request->note;
+        $order->note = $request->validated()['note'];
         $order->save();
 
         return redirect()->route('manage.order.show', $order);

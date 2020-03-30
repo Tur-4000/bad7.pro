@@ -13,7 +13,7 @@ class OrderController extends Controller
     public function store(StoreOrderRequest $request)
     {
         $order = new Order();
-        $order->fill($request->all());
+        $order->fill($request->validated());
         $order->save();
 
         $params = [

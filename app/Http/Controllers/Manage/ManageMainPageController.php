@@ -72,7 +72,7 @@ class ManageMainPageController extends Controller
 //        dd(__METHOD__, $request->all());
 
         $mainPage = MainPage::all()->first();
-        $mainPage->fill($request->all());
+        $mainPage->fill($request->validated());
         $mainPage->save();
 
         return redirect()->route('manage.mainpage');
