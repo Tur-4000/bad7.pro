@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StorePageRequest;
+use App\Http\Requests\UpdatePageRequest;
 use App\Models\Page;
 use Illuminate\Http\Request;
 
@@ -24,8 +25,6 @@ class ManagePageController extends Controller
             'user_friendly_name',
             'description'
         )->get();
-
-//dd(__METHOD__, $pages);
 
         return view('manage.pages.index', compact('pages'));
     }
@@ -50,16 +49,12 @@ class ManagePageController extends Controller
      */
     public function store(StorePageRequest $request)
     {
-//        dd($request->all());
-
         $page = new Page();
-        $page->fill($request->all());
+        $page->fill($request->validated());
         $page->save();
 
-//        TODO: сделать редирект на индекс управления добавленной страницы
-
         return redirect()
-            ->route('manage.portfolio.index');
+            ->route('manage.pages.index');
     }
 
     /**
@@ -70,8 +65,6 @@ class ManagePageController extends Controller
      */
     public function edit(Page $page)
     {
-//        dd($page);
-
         return view('manage.pages.edit', compact('page'));
     }
 
@@ -82,9 +75,16 @@ class ManagePageController extends Controller
      * @param  \App\Models\Page  $page
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Page $page)
+    public function update(UpdatePageRequest $request, Page $page)
     {
-        dd(__METHOD__, $request->all(), $page);
+//        dd(__METHOD__, $request->validated(), $page);
+
+        $pageName = $page->name;
+
+        $page->fill($request->validated());
+        $page->save();
+
+        return redirect()->route("manage.{$pageName}");
     }
 
     /**
@@ -95,6 +95,6 @@ class ManagePageController extends Controller
      */
     public function destroy(Page $page)
     {
-        dd($page);
+        dd(__METHOD__, $page);
     }
 }

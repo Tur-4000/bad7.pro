@@ -39,7 +39,7 @@ class ManageMainPageController extends Controller
     public function show()
     {
         $data = MainPage::all()->first();
-        $metaData = Page::where('name', 'main')->first();
+        $metaData = Page::where('name', 'mainpage')->first();
 
 //        dd(__METHOD__, $data, $metaData);
 
@@ -55,7 +55,7 @@ class ManageMainPageController extends Controller
     public function edit()
     {
         $content = MainPage::all()->first();
-        $metaData = Page::where('name', 'main')->first();
+        $metaData = Page::where('name', 'mainpage')->first();
 
         return view('manage.mainpage.edit', compact('content', 'metaData'));
     }

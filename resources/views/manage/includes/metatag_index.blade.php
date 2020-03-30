@@ -4,11 +4,6 @@
             {{--<a href="#" class="btn btn-outline-primary btn-sm float-left">--}}
             <i class="fas fa-edit"></i>
             Редактировать</a>
-        @hasanyrole('Developer|Admin')
-        <a href="{{ route('manage.pages.create') }}" class="btn btn-outline-success btn-sm float-right">
-            <i class="fas fa-plus-square"></i>
-            Добавить страницу</a>
-        @endhasrole
     </div>
 </div>
 
