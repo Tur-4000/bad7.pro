@@ -1,0 +1,1 @@
+INSERT INTO bad7.main_pages (id, title, text, video_url, created_at, updated_at) VALUES (1, 'Используется картинка логотипа', 'Снимают все, а мы делаем хорошо видеоролики продающие Ваши товары (услуги).', 'https://www.youtube.com/watch?v=Qv97VzXxUXc', null, '2020-03-30 05:58:23');
