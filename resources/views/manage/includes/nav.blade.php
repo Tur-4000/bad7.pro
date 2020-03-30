@@ -35,11 +35,17 @@
                             <i class="fas fa-user-friends"></i>
                             Пользователи
                         </a>
-                        <a class="dropdown-item" href="{{ route('manage.role.index') }}">
-                            <i class="fas fa-tags"></i>
-                            Роли
-                        </a>
+
                         @hasanyrole('Developer')
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="{{ route('manage.pages.index') }}">
+                                <i class="fas fa-copy"></i>
+                                Страницы сайта
+                            </a>
+                            <a class="dropdown-item" href="{{ route('manage.role.index') }}">
+                                <i class="fas fa-tags"></i>
+                                Роли
+                            </a>
                             <a class="dropdown-item" href="{{ route('manage.permission.index') }}">
                                 <i class="fas fa-lock"></i>
                                 Разрешения

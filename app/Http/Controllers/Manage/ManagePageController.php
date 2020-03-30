@@ -10,6 +10,28 @@ use Illuminate\Http\Request;
 class ManagePageController extends Controller
 {
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $pages = Page::select(
+            'id',
+            'name',
+            'title_tag',
+            'description_tag',
+            'keywords_tag',
+            'user_friendly_name',
+            'description'
+        )->get();
+
+//dd(__METHOD__, $pages);
+
+        return view('manage.pages.index', compact('pages'));
+    }
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

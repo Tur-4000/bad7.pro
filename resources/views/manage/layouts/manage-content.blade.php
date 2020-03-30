@@ -3,7 +3,7 @@
 @section('content')
     <div class="row">
         <div class="col-10">
-            <h1>Страница "{{ $tags->user_friendly_name }}"</h1>
+            <h1>Страница "{{ $metaData->user_friendly_name }}"</h1>
         </div>
     </div>
 

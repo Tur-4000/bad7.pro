@@ -24,11 +24,11 @@ class ManagePortfolioController extends Controller
         $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published'])
             ->orderBy('id', 'DESC')
             ->get();
-        $tags = Page::where('name', 'portfolio')->first();
+        $metaData = Page::where('name', 'portfolio')->first();
 
-//        dd($tags);
+//        dd($metaData);
 
-        return view('manage.portfolio.index', compact('portfolio', 'type', 'tags'));
+        return view('manage.portfolio.index', compact('portfolio', 'type', 'metaData'));
     }
 
     /**

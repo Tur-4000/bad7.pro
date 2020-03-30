@@ -55,7 +55,7 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::patch('/manage/manpage/edit', 'Manage\ManageMainPageController@update')->name('manage.mainpage.update');
 
     Route::resource('/manage/pages', 'Manage\ManagePageController')
-        ->only('create', 'store', 'edit', 'update')
+        ->only('index', 'create', 'store', 'edit', 'update')
         ->names('manage.pages');
 
     Route::resource('/manage/user', 'Manage\ManageUserController')
