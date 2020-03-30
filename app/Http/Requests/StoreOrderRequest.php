@@ -25,8 +25,8 @@ class StoreOrderRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:64',
-            'company' => 'max:128',
-            'description' => 'max:1000',
+            'company' => 'nullable|string|max:128',
+            'description' => 'nullable|string|max:1000',
             'contact' => 'required|string|max:128',
         ];
     }

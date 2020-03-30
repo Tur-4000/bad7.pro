@@ -25,6 +25,11 @@ class StorePageRequest extends FormRequest
     {
         return [
             'name' => 'required|string|max:32|unique:pages',
+            'user_friendly_name' => 'required|string|max:32',
+            'description' => 'nullable|string|max:500',
+            'title_tag' => 'nullable|string|max:64',
+            'description_tag' => 'nullable|string|max:300',
+            'keywords_tag' => 'nullable|string|max:300',
         ];
     }
 }
