@@ -55,9 +55,9 @@
 
 <ul class="navbar__contacts">
     <li class="navbar__contacts--element">
-        <a href="tel:{{ $contacts->phone_viber }}" class="navbar__contacts--link">+38 (050) 157 25 97</a>
+        <a href="tel:{{ $contacts->phone_viber }}" class="navbar__contacts--link">{{ $contacts->getFormatedPhone('viber') }}</a>
     </li>
     <li class="navbar__contacts--element">
-        <a href="tel:{{ $contacts->phone }}" class="navbar__contacts--link">+38 (067) 597 39 63</a>
+        <a href="tel:{{ $contacts->phone }}" class="navbar__contacts--link">{{ $contacts->getFormatedPhone() }}</a>
     </li>
 </ul>
