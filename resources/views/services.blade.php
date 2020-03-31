@@ -1,6 +1,14 @@
 @extends('layouts.app')
 
-@section('title'){{ $title }}@endsection
+@section('metatag')
+    <meta name="title" content="{{ $metaData->title_tag }}">
+    <meta name="description" content="{{ $metaData->description_tag }}">
+    <meta name="keywords" content="{{ $metaData->keywords_tag }}">
+@endsection
+
+@section('title')
+    - {{ $metaData->user_friendly_name }}
+@endsection
 
 @section('content')
     <section class="services">

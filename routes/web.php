@@ -55,10 +55,13 @@ Route::group( ['middleware' => ['auth']], function() {
     Route::get('/manage/manpage/edit', 'Manage\ManageMainPageController@edit')->name('manage.mainpage.edit');
     Route::patch('/manage/manpage/edit', 'Manage\ManageMainPageController@update')->name('manage.mainpage.update');
 
+    Route::get('/manage/services', 'Manage\ManageServicesPageController@show')->name('manage.services');
+    Route::get('/manage/services/edit', 'Manage\ManageServicesPageController@edit')->name('manage.services.edit');
+    Route::patch('/manage/services/edit', 'Manage\ManageServicesPageController@update')->name('manage.services.update');
+
     Route::resource('/manage/portfolio', 'Manage\ManagePortfolioController')
         ->only('index', 'create', 'store', 'edit', 'update', 'destroy')
         ->names('manage.portfolio');
-
 
     Route::get('/manage/contats', 'Manage\ManageContactPageController@show')->name('manage.contacts');
     Route::get('/manage/contats/edit', 'Manage\ManageContactPageController@edit')->name('manage.contacts.edit');
