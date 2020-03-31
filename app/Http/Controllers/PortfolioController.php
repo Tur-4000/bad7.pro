@@ -10,7 +10,6 @@ use App\Models\Page;
 class PortfolioController extends Controller
 {
     public function index() {
-        $title = 'Наши работы';
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
         $workType = '';
         $portfolio = Portfolio::where('published', 1)
@@ -18,12 +17,10 @@ class PortfolioController extends Controller
             ->paginate(4);
         $page = Page::where('name', 'portfolio')->first();
 
-        return view('portfolio', compact('title', 'portfolio', 'type', 'workType', 'page'));
+        return view('portfolio', compact('portfolio', 'type', 'workType', 'page'));
     }
 
     public function filter($workType) {
-//        dd(__METHOD__, $type);
-        $title = 'Наши работы';
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
         $portfolio = Portfolio::where('published', 1)
             ->where('type', '=', $workType)
@@ -31,6 +28,6 @@ class PortfolioController extends Controller
             ->paginate(4);
         $page = Page::where('name', 'portfolio')->first();
 
-        return view('portfolio', compact('title', 'portfolio', 'type', 'workType', 'page'));
+        return view('portfolio', compact('portfolio', 'type', 'workType', 'page'));
     }
 }
