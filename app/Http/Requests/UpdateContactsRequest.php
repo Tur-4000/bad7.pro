@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateMainPageRequest extends FormRequest
+class UpdateContactsRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,9 +24,13 @@ class UpdateMainPageRequest extends FormRequest
     public function rules()
     {
         return [
-            'title' => 'max:64',
-            'text' => 'required|string',
-            'video_url' => 'required|string|url|max:255',
+            'address' => 'required|string|max:255',
+            'email' => 'required|email:rfc|max:128',
+            'phone' => 'required|string|max:16',
+            'phone_viber' => 'required|string|max:16',
+            'facebook' => 'required|url|max:128',
+            'instagram' => 'required|url|max:128',
+            'youtube' => 'required|url|max:128',
         ];
     }
 }

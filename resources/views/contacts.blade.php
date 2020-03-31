@@ -20,19 +20,19 @@
 
         <div class="contacts__footer">
             <div class="contacts__item">
-                <p>{{ $content->address }}</p>
+                <p>{{ $contacts->address }}</p>
             </div>
             <div class="contacts__item">
                 <p>
-                    <a href="tel:{{ $content->phone_viber }}" class="contacts__link">+38 (050) 157 25 97</a>
+                    <a href="tel:{{ $contacts->phone_viber }}" class="contacts__link">+38 (050) 157 25 97</a>
                     <svg class="socials__viber">
                         <use xlink:href="/img/symbol/viber-brands.svg#viber"></use>
                     </svg>
                 </p>
-                <p><a href="tel:{{ $content->phone }}" class="contacts__link">+38 (067) 597 39 63</a></p>
+                <p><a href="tel:{{ $contacts->phone }}" class="contacts__link">+38 (067) 597 39 63</a></p>
             </div>
             <div class="contacts__item">
-                <a href="mailto:{{ $content->email }}" class="contacts__link">{{ $content->email }}</a>
+                <a href="mailto:{{ $contacts->email }}" class="contacts__link">{{ $contacts->email }}</a>
             </div>
         </div>
 

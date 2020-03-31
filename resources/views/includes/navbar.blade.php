@@ -20,7 +20,7 @@
 
 <ul class="navbar__socials socials">
     <li class="socials__element">
-        <a href="https://www.facebook.com/" class="socials__link" aria-label="Facebook">
+        <a href="{{ $contacts->facebook }}" class="socials__link" aria-label="Facebook">
             <svg class="socials__facebook">
                 <use xlink:href="/img/symbol/sprite.svg#fb"></use>
             </svg>
@@ -34,14 +34,14 @@
         {{--</a>--}}
     {{--</li>--}}
     <li class="socials__element">
-        <a href="https://www.instagram.com/" class="socials__link" aria-label="Instagram">
+        <a href="{{ $contacts->instagram }}" class="socials__link" aria-label="Instagram">
             <svg class="socials__instagram">
                 <use xlink:href="/img/symbol/sprite.svg#instagram"></use>
             </svg>
         </a>
     </li>
     <li class="socials__element">
-        <a href="https://www.youtube.com/channel/UCKCNjLQGyFdnxz5bhGMsxMQ" class="socials__link" aria-label="Youtube">
+        <a href="{{ $contacts->youtube }}" class="socials__link" aria-label="Youtube">
             <svg class="socials__youtube">
                 <use xlink:href="/img/symbol/sprite.svg#youtube"></use>
             </svg>
@@ -55,9 +55,9 @@
 
 <ul class="navbar__contacts">
     <li class="navbar__contacts--element">
-        <a href="tel:+380501572597" class="navbar__contacts--link">+38 (050) 157 25 97</a>
+        <a href="tel:{{ $contacts->phone_viber }}" class="navbar__contacts--link">+38 (050) 157 25 97</a>
     </li>
     <li class="navbar__contacts--element">
-        <a href="tel:+380675973963" class="navbar__contacts--link">+38 (067) 597 39 63</a>
+        <a href="tel:{{ $contacts->phone }}" class="navbar__contacts--link">+38 (067) 597 39 63</a>
     </li>
 </ul>

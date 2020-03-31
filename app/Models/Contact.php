@@ -11,5 +11,8 @@ class Contact extends Model
         'email',
         'phone',
         'phone_viber',
+        'facebook',
+        'instagram',
+        'youtube',
     ];
 }

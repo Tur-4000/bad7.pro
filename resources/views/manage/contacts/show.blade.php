@@ -17,6 +17,15 @@
                 <hr>
                 <h4 class="card-title">Контактный телефон связанный с Viber</h4>
                 <p class="card-text">{{ $data->phone_viber }}</p>
+                <hr>
+                <h4 class="card-title">Ссылка на страницу Facebook</h4>
+                <p class="card-text">{{ $data->facebook }}</p>
+                <hr>
+                <h4 class="card-title">Ссылка на страницу Instagram</h4>
+                <p class="card-text">{{ $data->instagram }}</p>
+                <hr>
+                <h4 class="card-title">Ссылка на канал Youtube</h4>
+                <p class="card-text">{{ $data->youtube }}</p>
             </div>
         </div>
     </div>

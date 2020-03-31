@@ -11,9 +11,9 @@ class ContactsController extends Controller
 {
     public function index() {
         $order = new Order();
-        $content = Contact::all()->first();
+        $contacts = Contact::all()->first();
         $metaData = Page::where('name', 'contacts')->first();
 
-        return view('contacts', compact('content', 'order', 'metaData'));
+        return view('contacts', compact('contacts', 'order', 'metaData'));
     }
 }

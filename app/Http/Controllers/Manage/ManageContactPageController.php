@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\UpdateContactsRequest;
 use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\Contact;
@@ -34,7 +35,7 @@ class ManageContactPageController extends Controller
     {
         $content = Contact::all()->first();
         $metaData = Page::where('name', 'contacts')->first();
-//dd(__METHOD__, $content, $metaData);
+
         return view('manage.contacts.edit', compact('content', 'metaData'));
     }
 
@@ -45,14 +46,14 @@ class ManageContactPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(UpdateContactsRequest $request)
     {
-        dd(__METHOD__, $request->all());
+//        dd(__METHOD__, $request->all());
 
-//        $contactsPage = Contact::all()->first();
-//        $contactsPage->fill($request->validated());
-//        $contactsPage->save();
-//
-//        return redirect()->route('manage.mainpage');
+        $contactsPage = Contact::all()->first();
+        $contactsPage->fill($request->validated());
+        $contactsPage->save();
+
+        return redirect()->route('manage.contacts');
     }
 }
