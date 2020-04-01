@@ -84,7 +84,7 @@ class ManagePageController extends Controller
         $page->fill($request->validated());
         $page->save();
 
-        return redirect()->route("manage.{$pageName}");
+        return redirect()->route("manage.{$pageName}.index");
     }
 
     /**

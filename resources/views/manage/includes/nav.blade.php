@@ -16,10 +16,10 @@
                 <a class="nav-link dropdown-toggle" href="#" id="pages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Управление контентом</a>
                 <div class="dropdown-menu" aria-labelledby="pages">
-                    <a class="dropdown-item" href="{{ route('manage.mainpage') }}">Главная страница</a>
-                    <a class="dropdown-item" href="{{ route('manage.services') }}">Страница "Услуги"</a>
+                    <a class="dropdown-item" href="{{ route('manage.mainpage.index') }}">Главная страница</a>
+                    <a class="dropdown-item" href="{{ route('manage.services.index') }}">Страница "Услуги"</a>
                     <a class="dropdown-item" href="{{ route('manage.portfolio.index') }}">Страница "Работы"</a>
-                    <a class="dropdown-item" href="{{ route('manage.contacts') }}">Страница "Контакты"</a>
+                    <a class="dropdown-item" href="{{ route('manage.contacts.index') }}">Страница "Контакты"</a>
                 </div>
             </li>
 

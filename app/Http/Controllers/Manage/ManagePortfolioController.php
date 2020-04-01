@@ -79,8 +79,9 @@ class ManagePortfolioController extends Controller
     {
         $portfolio = Portfolio::select(['id', 'title', 'description', 'type', 'date', 'url', 'published', 'bg_image'])
             ->findOrFail($id);
+        $metaData = Page::where('name', 'portfolio')->first();
 
-        return view('manage.portfolio.edit', compact('portfolio'));
+        return view('manage.portfolio.edit', compact('portfolio', 'metaData'));
     }
 
     /**

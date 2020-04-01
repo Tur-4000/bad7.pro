@@ -6,7 +6,7 @@ return [
     'image-settings' => [
 
         // Use thumbnails or not.
-        'thumbnail_status' => false,
+        'thumbnail_status' => true,
 
         // Base store for images.
         'baseStore' => '/img/uploads/',

@@ -1,5 +1,6 @@
 require('./bootstrap');
 require('jquery-ujs');
+require('./upload_image_preview');
 
 // require('select2');
 

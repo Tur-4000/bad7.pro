@@ -13,14 +13,14 @@
                 @endforeach
             @endif
 
-            <h1>Редактирование информации об услуге</h1>
+            <h1>Добавление новой услуги</h1>
 
-            {{ Form::model($service, ['route' => ['manage.services.update', $service], 'method' => 'PATCH','files'=>'true']) }}
+            {{ Form::model($service, ['route' => 'manage.services.store', 'method' => 'POST','files'=>'true']) }}
 
             @include('manage.includes.services_form')
 
             <div class="form-group d-flex justify-content-between">
-                {{ Form::submit('Сохранить', ['class' => 'btn btn-primary']) }}
+                {{ Form::submit('Добавить', ['class' => 'btn btn-primary']) }}
                 <a href="{{ route('manage.services.index') }}" class="btn btn-outline-success">Назад</a>
             </div>
             {{ Form::close() }}
