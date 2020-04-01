@@ -33,7 +33,11 @@
 <div class="form-group">
     {{ Form::label('bgimage', 'Фоновое изображение') }}
     <div class="image-preview-block">
-        <div class="image-preview-image"></div>
+        <div class="image-preview-image">
+            @if($portfolio->bg_image)
+                <img src="/img/uploads/portfolios/original/{{ $portfolio->bg_image }}" alt="$service->bg_image" width="200">
+            @endif
+        </div>
         {{ Form::file('bgimage', $attributes = ['class' => 'form-control-file image-preview-input', 'aria-describedby' => 'bgimageHelp']) }}
     </div>
     <small id="bgimageHelp" class="form-text text-muted">Фоновое изображение шириной не более 640 пикселей</small>

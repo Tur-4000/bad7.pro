@@ -28,3 +28,13 @@
     </div>
 
 @endsection
+
+@section('scripts')
+
+    <script>
+        $(document).ready(function() {
+            $('.description').summernote();
+        });
+    </script>
+
+@endsection

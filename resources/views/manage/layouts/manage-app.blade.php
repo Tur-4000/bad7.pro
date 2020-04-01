@@ -33,5 +33,7 @@
 {{--<script src="js/jquery-3.js"></script>--}}
 {{--<script src="js/bootstrap.js"></script>--}}
 
+@yield('scripts')
+
 </body>
 </html>

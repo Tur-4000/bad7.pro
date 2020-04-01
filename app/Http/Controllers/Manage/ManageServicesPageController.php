@@ -73,12 +73,12 @@ class ManageServicesPageController extends Controller
      */
     public function show()
     {
-        $data = Service::all();
+        $service = Service::all();
         $metaData = Page::where('name', 'services')->first();
 
 //        dd(__METHOD__, $data, $metaData);
 
-        return view('manage.services.show', compact('data', 'metaData'));
+        return view('manage.services.show', compact('service', 'metaData'));
     }
 
     /**
@@ -101,9 +101,11 @@ class ManageServicesPageController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $service)
     {
-        dd(__METHOD__, $request->all());
+        dd(__METHOD__, $request->all(), $service);
+
+
 
     }
 }
