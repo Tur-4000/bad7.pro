@@ -29,8 +29,8 @@
                             {{ $service->title }}
                         </a>
                     </th>
-                    <td>{{ $service->description }}</td>
-                    <td>{{ $service->description_ext }}</td>
+                    <td>{!!  $service->description !!}</td>
+                    <td>{!! $service->description_ext !!}</td>
                     <td><img src="/img/uploads/services/original/{{ $service->bg_image }}" alt="{{ $service->bg_image }}" width="200"></td>
                     <td>{{ $service->video_url }}</td>
                     {{--<td>--}}

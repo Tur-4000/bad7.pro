@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Manage;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreServicesPageRequest;
+use App\Http\Requests\UpdateServicePageRequest;
 use Illuminate\Http\Request;
 use App\Models\Page;
 use App\Models\Service;
@@ -98,14 +99,32 @@ class ManageServicesPageController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  \App\Models\Service  $service
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $service)
+    public function update(UpdateServicePageRequest $request, Service $service)
     {
-        dd(__METHOD__, $request->all(), $service);
+//        dd(__METHOD__, $request->all(), $service);
 
+//        $services = Service::select('id', 'title', 'description', 'description_ext', 'bg_image', 'video_url', 'order')
+//            ->findOrFail($service);
+        $service->fill($request->except('bg_image'));
+//dd($service);
+        if ($request->bg_image) {
+            $imageFile = $request->bg_image;
+            try {
+                // Upload and save image.
+                $bgImage['image'] = UploadImage::upload($imageFile, 'service')->getImageName();
+                $service->bg_image = $bgImage['image'];
+            } catch (UploadImageException $e) {
 
+                return back()->withInput()->withErrors(['bgImage', $e->getMessage()]);
+            }
+        }
+//dd($service);
 
+        $service->save();
+//dd($service);
+        return redirect()->route('manage.services.index');
     }
 }

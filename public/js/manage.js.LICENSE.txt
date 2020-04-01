@@ -5,6 +5,19 @@
   */
 
 /*!
+ * 
+ * Super simple wysiwyg editor v0.8.16
+ * https://summernote.org
+ * 
+ * 
+ * Copyright 2013- Alan Hong. and other contributors
+ * summernote may be freely distributed under the MIT license.
+ * 
+ * Date: 2020-02-19T09:12Z
+ * 
+ */
+
+/*!
  * Sizzle CSS Selector Engine v2.3.4
  * https://sizzlejs.com/
  *
@@ -45,7 +58,7 @@
 
 /**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
- * @version 1.16.0
+ * @version 1.16.1
  * @license
  * Copyright (c) 2016 Federico Zivolo and contributors
  *

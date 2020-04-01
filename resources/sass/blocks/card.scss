@@ -7,6 +7,8 @@
 }
 
 .card__head {
+  display: flex;
+  justify-content: center;
   position: relative;
   padding-bottom: 56.25%; /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
   padding-top: 30px;
@@ -113,27 +115,6 @@
   margin-top: 14%;
   margin-bottom: auto;
   z-index: 3;
-}
-
-.card__head--reklama {
-  display: flex;
-  justify-content: center;
-  background: url("/img/reklama-bg.jpg") center no-repeat;
-  background-size: cover;
-}
-.card__head--image {
-  display: flex;
-  justify-content: center;
-  background: url("/img/image-bg.jpg") center no-repeat;
-  background-size: cover;
-}
-.card__head--translation {
-  background: url("/img/translation.jpg") center no-repeat;
-  background-size: 100%;
-}
-.card__head--promotion {
-  background: url("/img/SEO15.jpg") center no-repeat;
-  background-size: cover;
 }
 
 @media (max-width: 980px) {
