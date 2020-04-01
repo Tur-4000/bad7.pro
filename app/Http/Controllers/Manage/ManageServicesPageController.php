@@ -63,7 +63,7 @@ class ManageServicesPageController extends Controller
         $service->save();
 
         return redirect()
-            ->route('manage.services');
+            ->route('manage.services.index');
 
     }
 
