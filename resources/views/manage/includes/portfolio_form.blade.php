@@ -32,7 +32,10 @@
 
 <div class="form-group">
     {{ Form::label('bgimage', 'Фоновое изображение') }}
-    {{ Form::file('bgimage', $attributes = ['class' => 'form-control-file', 'aria-describedby' => 'bgimageHelp']) }}
+    <div class="image-preview-block">
+        <div class="image-preview-image"></div>
+        {{ Form::file('bgimage', $attributes = ['class' => 'form-control-file image-preview-input', 'aria-describedby' => 'bgimageHelp']) }}
+    </div>
     <small id="bgimageHelp" class="form-text text-muted">Фоновое изображение шириной не более 640 пикселей</small>
 </div>
 
