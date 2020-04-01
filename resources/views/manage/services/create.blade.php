@@ -46,7 +46,7 @@
                 ],
                 styleTags: [
                     'p',
-                    { title: 'Подзаголовок', tag: 'p', className: 'card__subtitle', value: 'h4' },
+                    { title: 'Подзаголовок', tag: 'h4', className: 'card__subtitle', value: 'p' },
                     'pre', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'
                 ],
             });
