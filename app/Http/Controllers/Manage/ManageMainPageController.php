@@ -75,6 +75,6 @@ class ManageMainPageController extends Controller
         $mainPage->fill($request->validated());
         $mainPage->save();
 
-        return redirect()->route('manage.mainpage');
+        return redirect()->route('manage.mainpage.index');
     }
 }
