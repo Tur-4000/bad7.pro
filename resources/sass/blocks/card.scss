@@ -37,6 +37,12 @@
   font-weight: 600;
 }
 
+.card__blockquote {
+    margin-left: 5%;
+    padding-left: 3%;
+    border-left: $menuBg solid 3px;
+}
+
 .card__text {
   min-height: 120px;
   line-height: 1.5;
