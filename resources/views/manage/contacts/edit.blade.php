@@ -56,7 +56,7 @@
 
             <div class="form-group d-flex justify-content-between">
                 {{ Form::submit('Сохранить', ['class' => 'btn btn-primary']) }}
-                <a href="{{ route('manage.contacts') }}" class="btn btn-outline-success">Назад</a>
+                <a href="{{ route('manage.contacts.index') }}" class="btn btn-outline-success">Назад</a>
             </div>
             {{ Form::close() }}
         </div>

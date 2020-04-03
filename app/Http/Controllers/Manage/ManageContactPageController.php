@@ -54,6 +54,6 @@ class ManageContactPageController extends Controller
         $contactsPage->fill($request->validated());
         $contactsPage->save();
 
-        return redirect()->route('manage.contacts');
+        return redirect()->route('manage.contacts.index');
     }
 }
