@@ -13,6 +13,9 @@
 @section('content')
     <section class="services">
         <div class="services__header"></div>
+        <h1 class="service__title">
+           Наши услуги
+        </h1>
         <div class="services__content">
 
         @foreach($services as $service)
