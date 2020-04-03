@@ -13,7 +13,7 @@
             ],
             styleTags: [
                 'p',
-                { title: 'Подзаголовок', tag: 'h4', className: 'card__subtitle', value: 'p' },
+                { title: 'Подзаголовок', tag: 'p', className: 'card__subtitle', value: 'p' },
                 { title: 'Цитата', tag: 'p', className: 'card__blockquote', value: 'p' }
             ],
         });
