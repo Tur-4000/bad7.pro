@@ -30,4 +30,25 @@ class StoreOrderRequest extends FormRequest
             'contact' => 'required|string|max:128',
         ];
     }
+
+    /**
+     * Get the error messages for the defined validation rules.
+     *
+     * @return array
+     */
+    public function messages()
+    {
+        return [
+            'name.required' => 'Имя обязательно для заполнения',
+            'name.string' => 'Имя должно быть строкой',
+            'name.max' => 'Имя не может быть больше 64 символов',
+            'company.string' => 'Название компании должно быть строкой',
+            'company.max' => 'Название компании не может быть больше 128 символов',
+            'description.string' => 'Запрос должен быть строкой',
+            'description.max' => 'Запрос не может быть больше 1000 символов',
+            'contact.required'  => 'Укажите, как с вами можно связаться',
+            'contact.string'  => 'Контактная информация должна быть строкой',
+            'contact.max'  => 'Контактная информация не может превышать 128 символов',
+        ];
+    }
 }
