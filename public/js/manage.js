@@ -54152,7 +54152,7 @@ $(document).ready(function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\USR\OSPanel\domains\bad7.pro\resources\js\manage.js */"./resources/js/manage.js");
+module.exports = __webpack_require__(/*! /home/tur/prj/bad7.pro/resources/js/manage.js */"./resources/js/manage.js");
 
 
 /***/ })

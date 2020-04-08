@@ -12621,9 +12621,9 @@ __webpack_require__(/*! magnific-popup */ "./node_modules/magnific-popup/dist/jq
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\USR\OSPanel\domains\bad7.pro\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! D:\USR\OSPanel\domains\bad7.pro\resources\sass\app.scss */"./resources/sass/app.scss");
-module.exports = __webpack_require__(/*! D:\USR\OSPanel\domains\bad7.pro\resources\sass\manage.scss */"./resources/sass/manage.scss");
+__webpack_require__(/*! /home/tur/prj/bad7.pro/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/tur/prj/bad7.pro/resources/sass/app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! /home/tur/prj/bad7.pro/resources/sass/manage.scss */"./resources/sass/manage.scss");
 
 
 /***/ })

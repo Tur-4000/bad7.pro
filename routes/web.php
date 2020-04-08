@@ -20,7 +20,7 @@ Route::get('/contacts', 'ContactsController@index')->name('contacts');
 Route::post('/order/add', 'OrderController@store')->name('order.add');
 
 Auth::routes(['register' => false]);
-//Auth::routes();
+// Auth::routes();
 
 //Route::get('/manage', 'Manage\ManageOrderController@index')
 //    ->name('manage.index')
