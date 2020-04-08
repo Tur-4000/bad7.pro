@@ -10,7 +10,8 @@ use App\Models\Contact;
 
 class PortfolioController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
         $workType = '';
         $portfolio = Portfolio::where('published', 1)
@@ -22,7 +23,8 @@ class PortfolioController extends Controller
         return view('portfolio', compact('portfolio', 'type', 'workType', 'page', 'contacts'));
     }
 
-    public function filter($workType) {
+    public function filter($workType)
+    {
         $type = ['image' => 'имиджевый', 'reklama' => 'рекламный'];
         $portfolio = Portfolio::where('published', 1)
             ->where('type', '=', $workType)
