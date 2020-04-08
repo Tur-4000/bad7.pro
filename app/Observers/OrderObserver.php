@@ -26,8 +26,10 @@ class OrderObserver
 
         $managerEmail = env('SALES_MANAGER_EMAIL', 'sales@bad7.pro');
 
+        $message = (new MailOrder($params))->onQueue('emails');
+
 //        Mail::to($managerEmail)->send(new MailOrder($params));
-        Mail::to($managerEmail)->queue(new MailOrder($params));
+        Mail::to($managerEmail)->queue($message);
     }
 
     /**
