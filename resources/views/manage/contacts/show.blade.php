@@ -9,8 +9,11 @@
                 <h4 class="card-title">Адрес</h4>
                 <p class="card-text">{{ $data->address }}</p>
                 <hr>
-                <h4 class="card-title">Контактный e-mail</h4>
+                <h4 class="card-title">Контактный e-mail Sales</h4>
                 <p class="card-text">{{ $data->email }}</p>
+                <hr>
+                <h4 class="card-title">Контактный e-mail Info</h4>
+                <p class="card-text">{{ $data->email_info }}</p>
                 <hr>
                 <h4 class="card-title">Контактный телефон</h4>
                 <p class="card-text">{{ $data->phone }}</p>

@@ -34,6 +34,7 @@
                 </p>
             </div>
             <div class="contacts__item">
+                <a href="mailto:{{ $contacts->email_info }}" class="contacts__link">{{ $contacts->email_info }}</a>
                 <a href="mailto:{{ $contacts->email }}" class="contacts__link">{{ $contacts->email }}</a>
             </div>
         </div>

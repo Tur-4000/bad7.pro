@@ -25,7 +25,12 @@
             <div class="form-group">
                 {{ Form::label('email', 'e-Mail*') }}
                 {{ Form::text('email', null, ['class' => 'form-control', 'aria-describedby' => 'emailHelp']) }}
-                <small id="emailHelp" class="form-text text-muted">Контактный email, максимум 128 символов.</small>
+                <small id="emailHelp" class="form-text text-muted">Контактный email продажников, максимум 128 символов.</small>
+            </div>
+            <div class="form-group">
+                {{ Form::label('email_info', 'e-Mail Info') }}
+                {{ Form::text('email_info', null, ['class' => 'form-control', 'aria-describedby' => 'emailInfoHelp']) }}
+                <small id="emailInfoHelp" class="form-text text-muted">Контактный email Info, максимум 128 символов.</small>
             </div>
             <div class="form-group">
                 {{ Form::label('phone', 'Телефон*') }}
