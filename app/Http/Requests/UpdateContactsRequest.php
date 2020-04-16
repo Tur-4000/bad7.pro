@@ -26,6 +26,7 @@ class UpdateContactsRequest extends FormRequest
         return [
             'address' => 'required|string|max:255',
             'email' => 'required|email:rfc|max:128',
+            'email_info' => 'required|email:rfc|max:128',
             'phone' => 'required|string|max:16',
             'phone_viber' => 'required|string|max:16',
             'facebook' => 'required|url|max:128',
