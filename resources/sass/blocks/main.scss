@@ -49,17 +49,17 @@
 }
 
 .main__link {
-  color: $black;
+  color: $red;
   line-height: 1.5;
   text-decoration: none;
   text-transform: uppercase;
-  border-bottom: 2px solid $activeColor;
+  border-bottom: 2px solid $red;
   transition-duration: 500ms;
   transition-property: color, border-color;
 
   &:hover {
-    color: $red;
-    border-color: $red;
+    color: $black;
+    border-color: $activeColor;
   }
 }
 
