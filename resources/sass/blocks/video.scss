@@ -13,7 +13,7 @@
     padding-top: 5px;
     padding-left: 15px;
     border-radius: 50%;
-    border: 3px solid $white;
+    border: 3px solid $red;
     z-index: 10;
     transition-property: background, border-color;
     transition-duration: 500ms;
@@ -21,7 +21,7 @@
     svg {
         width: 40px;
         height: 40px;
-        fill: $white;
+        fill: $red;
         z-index: 10;
         transition-property: fill;
         transition-duration: 500ms;
@@ -29,6 +29,7 @@
 
     &:hover {
         background: $white;
+        border-color: $white;
 
         svg {
             fill: $activeColor;
