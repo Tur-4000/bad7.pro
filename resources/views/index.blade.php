@@ -27,7 +27,7 @@
                     <p class="main__text">
                         {{ $content->text }}
                         <br>
-                        <a href="#order-form"  class="main__link popup-with-form">сделать хорошо</a>
+                        <a href="#order-form"  class="main__button popup-with-form">сделать хорошо</a>
                     </p>
                 </div>
             </div>

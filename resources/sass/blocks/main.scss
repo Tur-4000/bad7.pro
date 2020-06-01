@@ -48,18 +48,28 @@
   line-height: 2;
 }
 
-.main__link {
-  color: $red;
-  line-height: 1.5;
-  text-decoration: none;
+.main__button {
+  display: block;
+  margin: 0 0 0 auto;
+  padding: 0.5rem 2rem;
+  background: $red;
+  border-radius: 0.5rem;
+  color: $white;
   text-transform: uppercase;
-  border-bottom: 2px solid $red;
+  text-decoration: none;
+  font-weight: 600;
   transition-duration: 500ms;
-  transition-property: color, border-color;
+  transition-property: background, color;
 
   &:hover {
-    color: $black;
-    border-color: $activeColor;
+    cursor: pointer;
+    color: $activeColor;
+    background: $menuBg;
+  }
+
+  &:focus {
+    color: $activeColor;
+    background: darken($menuBg, 50%);
   }
 }
 
