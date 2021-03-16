@@ -29,7 +29,7 @@ class OrderObserver
         $message = (new MailOrder($params))->onQueue('emails');
 
 //        Mail::to($managerEmail)->send(new MailOrder($params));
-        Mail::to($managerEmail)->queue($message);
+//        Mail::to($managerEmail)->queue($message);
     }
 
     /**
