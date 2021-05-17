@@ -14,7 +14,7 @@
         "jenssegers/date": "^3.5",
         "kirill-dan/uploadimage": "2.*",
         "laracasts/flash": "^3.1",
-        "laravel/framework": "^6.2",
+        "laravel/framework": "^6.2 <7.0",
         "laravel/tinker": "^2.0",
         "laravelcollective/html": "^6.0",
         "spatie/laravel-permission": "^3.11"
