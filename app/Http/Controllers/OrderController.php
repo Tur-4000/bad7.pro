@@ -11,7 +11,7 @@ class OrderController extends Controller
 {
     public function store(StoreOrderRequest $request)
     {
-        $order = Order::create($request->validated());
+//        $order = Order::create($request->validated());
 
         return redirect()->route('services');
     }
